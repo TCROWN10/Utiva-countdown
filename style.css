@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(234, 17%, 12%);
+    background-image: url(/WhatsApp\ Image\ 2024-05-29\ at\ 2.21.43\ PM.jpeg);
+}
+.h2-text {
+    text-align: center;
+    margin-top: 5rem;
+    background-color:hsl(345, 95%, 68%);
+    /* color: white; */
+    margin-bottom: 3rem;
+    font-size: 5rem;
+}
+
+.try {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.countdown-item {
+    position: relative;
+     /* background-color: hsl(236, 21%, 26%); */
+    background: linear-gradient(to top, hsl(235, 16%, 14%) 0 50%,   hsl(234, 17%, 12%)  50% 100%);
+    padding: 2rem;
+    /* font-weight: 10rem; */
+    font-size: 3rem;
+    font-family: "Red Hat Text", sans-serif;
+    color: hsl(345, 95%, 68%);
+    box-shadow: 0px 8px 2px 0px black;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.countdown-item::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height:50%;
+    width:100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background: black;
+    opacity: 0.2;
+    z-index: 10;
+}
+
+
+.countdown-item span.first-span{
+    position: absolute;
+    top: calc(50% - (12px / 2));
+    z-index: 10;
+    width: 12px;
+    height:12px;
+    border-radius: 50%;
+    background: black;
+}
+
+.countdown-item span.first-span:first-of-type {
+    left: -6px;
+}
+
+.countdown-item span.first-span:nth-of-type(2){
+    right: -6px;
+}
+
+.countdown-item span:last-of-type {
+    position: absolute;
+    top: 50%;
+    left:0px;
+    background:  hsl(235, 16%, 14%);
+    width:100%;
+    height: 1px;
+}
+
+.count-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.count {
+    font-weight: bold;
+    color: white;
+}
+
+.unit {
+    font-size: 16px;
+    letter-spacing: 0.2rem;
+    color: red;
+}
+
